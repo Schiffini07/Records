@@ -6,7 +6,6 @@
             <h2 class="text-primary">Create User</h2>
             <hr />
         </div>
-        @*<div asp-validation-summary="All"></div>*@
         <div class="mb-3">
             <label asp-for="Name"></label>
             <input asp-for="Name" class="form-control" autocomplete="off" />
@@ -21,6 +20,5 @@
         <a asp-controller="User" asp-action="Index" class="btn btn-secondary" style="width:150px">
             Back to List
         </a>
-
     </div>
 </form>

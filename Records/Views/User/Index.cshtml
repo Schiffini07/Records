@@ -16,9 +16,7 @@
                 <i class="bi bi-plus-circle"></i> &nbsp; Create New User
             </a>
         </div>
-
     </div>
-
 
 <table class="table table-bordered table-striped" style="width:100%">
     <thead>
@@ -60,12 +58,12 @@
                         class="btn btn-primary mx-2"><i class="bi bi-pencil-square"></i> Edit</a>
                         <a asp-controller="User" asp-action="Delete" asp-route-id="@item.Id"
                         class="btn btn-danger mx-2"><i class="bi bi-trash-fill"></i> Delete</a>
+                        <a asp-controller="User" asp-action="ListCheck" asp-route-id="@item.Id"
+                        class="btn btn-info mx-2"><i class="bi bi-aspect-ratio"></i> Show</a>
                     </div>
                 </td>
-
             </tr>
         }
     </tbody>
 </table>
-
 </div>

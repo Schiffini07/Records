@@ -121,5 +121,23 @@ namespace Records.Controllers
             TempData["success"] = "User deleted successfully";
             return RedirectToAction("Index");
         }
+
+        //Get
+        public IActionResult ListCheck(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+
+            }
+            var userFromDb = _db.Users.Find(id);
+
+            if (userFromDb == null)
+            {
+                return NotFound();
+            }
+
+            return View(userFromDb);
+        }
     }
 }

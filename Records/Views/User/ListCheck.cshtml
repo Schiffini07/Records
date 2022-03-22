@@ -1,0 +1,60 @@
+﻿@model User
+
+@{
+    Random rnd = new Random();
+    int num = rnd.Next(1, 1000);
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2>Details</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="User" asp-action="Index" class="btn btn-secondary" style="width:150px">
+                Back to List
+            </a>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr></tr>
+        </thead>
+        <tbody>
+            <hr />
+            <tr>
+                <div class="col-12 text-end" style="font-size: 1.3rem;">
+                    <label># @num </label>
+                </div>
+            </tr>
+            <tr>
+                <div class="col-12" style="font-size: 1.45rem;">
+                    <label>@Model.Name</label>
+                </div>
+            </tr>
+            <tr>
+                <div class="col-12 text-end" style="font-size: 1.5rem;">
+                    <label>Date: @Model.Date</label>
+                </div>
+            </tr>
+            <tr>
+                <div class="col-12 text-end" style="font-size: 1.5rem;">
+                    <label>$ @Model.Amount.ToString("N2")</label>
+                </div>
+            </tr>
+            <tr>
+                <div class="col-12 text-end" style="font-size: 1.5rem;">
+                    <label>@Model.LiteralAmount</label>
+                </div>
+            </tr>
+            <hr />
+            <tr>
+                <div class="col-12 text-center" style="font-size: 1.42rem;">
+                    <label>12345 89654 85271 62480</label>
+                </div>
+            </tr>
+            <hr />
+        </tbody>
+    </table>
+</div>
