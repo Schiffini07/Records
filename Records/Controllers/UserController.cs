@@ -38,7 +38,7 @@ namespace Records.Controllers
                     Name = user.Name,
                     Amount = user.Amount,
                     Date = user.Date,
-                    LiteralAmount = Converter.NumberALetters(user.Amount)
+                    LiteralAmount = Converter.NumberToWords(user.Amount)
 
                 };
                 _db.Users.Add(user1);
@@ -77,7 +77,7 @@ namespace Records.Controllers
                 user.Amount = user.Amount;
                 user.Name = user.Name;
                 user.Date = user.Date;
-                user.LiteralAmount = Converter.NumberALetters(user.Amount);
+                user.LiteralAmount = Converter.NumberToWords(user.Amount);
                 _db.Users.Update(user);
                 _db.SaveChanges();
                 TempData["success"] = "User updated successfully";
@@ -104,7 +104,7 @@ namespace Records.Controllers
 
             return View(userFromDb);
         }
-
+        
         //Post
         [HttpPost,ActionName("Delete")]
         [ValidateAntiForgeryToken]

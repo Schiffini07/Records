@@ -1,10 +1,5 @@
 ﻿@model User
 
-@{
-    Random rnd = new Random();
-    int num = rnd.Next(1, 1000);
-}
-
 <div class="container p-3">
     <div class="row pt-4">
         <div class="col-6">
@@ -25,7 +20,7 @@
             <hr />
             <tr>
                 <div class="col-12 text-end" style="font-size: 1.3rem;">
-                    <label># @num </label>
+                    <label># @Model.Id </label>
                 </div>
             </tr>
             <tr>
