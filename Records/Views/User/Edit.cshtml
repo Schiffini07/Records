@@ -8,12 +8,12 @@
         </div>
         <div class="mb-3">
             <label asp-for="Name"></label>
-            <input asp-for="Name" class="form-control" autocomplete="off"  />
+            <input asp-for="Name" class="form-control" autocomplete="off" required />
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="Amount"></label>
-            <input asp-for="Amount" class="form-control" autocomplete="off" />
+            <input type="number" step=".01" asp-for="Amount" class="form-control" autocomplete="off" required/>
             <span asp-validation-for="Amount" class="text-danger"></span>
         </div>
         <div class="mb-3">
